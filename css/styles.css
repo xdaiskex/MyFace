@@ -1,0 +1,390 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #e0e0e0;
+    /*background-color: #bbdefb;*/
+}
+
+#main {
+	flex: 1 0 auto;
+}
+
+nav{
+	background-color: #1976D2;
+	/*background-color: black;*/
+}
+
+nav .brand-logo{
+	font-size: 40px;
+	font-weight: bold;
+	font-family: 'Questrial', sans-serif;
+	margin-left: 50px;
+}
+
+nav .logo2{
+	margin-left: 0px;
+}
+
+nav ul li a{
+	font-size: 24px;
+	font-family: 'Questrial', sans-serif;
+	font-weight: bold;
+}
+
+.side-nav li a{
+	font-size: 24px;
+}
+
+.login{
+	padding: 0px !important;
+	margin-top: 60px;
+	margin-bottom: 30px;
+	background-color: white;
+	box-shadow: 0px 1px 3px 1px black;
+	border: 1px solid black;
+}
+
+.login input{
+	font-size: 20px;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+.login h2{
+	margin-top: 0px !important;
+	margin-bottom: 60px;
+	background-color: #1976D2;
+	color: white;
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+	font-family: 'Questrial', sans-serif;
+	border-bottom: 2px solid black;
+}
+
+.login .input-field{
+	font-size: 20px;
+	margin-left: 20px !important;
+	margin-right: 20px !important;
+}
+
+.login label{
+	color: black;
+}
+
+.login input{
+	border-bottom: 1px solid black;
+}
+
+.login .loginBtn{
+	margin-top: 40px;
+	background-color: #1976D2;
+	font-size: 20px;
+	border-top: 2px solid black;
+	border-right: 1px solid black;
+}
+
+.login .loginBtn a{
+	color: white;
+}
+
+.login .signupBtn{
+	margin-top: 40px;	
+	background-color: #43a047;
+	font-size: 20px;
+	border-top: 2px solid black;
+	border-left: 1px solid black;
+}
+
+.signup h2{
+	background-color: #43a047;
+}
+
+#usernameMessage, #passwordMessage{
+	color: black;
+	font-weight: bold;
+}
+
+#signupSuccess{
+	margin-top: 150px;
+	display: none;
+}
+
+#signupSuccess h3{
+	font-size: 50px;
+	margin-bottom: 30px;
+}
+
+#signupSuccess a{
+	background-color: #43a047;
+	font-size: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
+	box-shadow: 0px 1px 5px 1px black;
+}
+
+.mobileName{
+	font-size: 20px !important;
+	padding-bottom: 10px;
+	margin-bottom: -10px !important;
+}
+
+.mobilePic{
+	width: 80px !important;
+	height: 80px !important;
+	border: 3px solid white;
+}
+
+.logout{
+	margin-top: 100px;
+}
+
+.logout p{
+	font-size: 40px;
+}
+
+.content{
+	margin-left: 25% !important;
+}
+
+.container2{
+	width: 100%;
+	overflow: hidden;
+}
+
+.statusArea{
+	margin-top: 50px;
+}
+
+.status{
+	background-color: white;
+	height: 150px;
+	font-size: 20px;
+	padding: 15px;
+	padding-left: 170px;
+	resize: none;
+	/*border: 1px solid black;*/
+	box-shadow: 0px 1px 3px 1px black;
+	background: white url('../img/profile0.png');
+	background-size: 150px 150px;
+	background-repeat: no-repeat;
+}
+
+#status input{
+	box-shadow: 1px 1px 3px 1px black;
+}
+
+.friends{
+	font-size: 30px;
+	/*background-color: #448aff;*/
+	/*background-color: #2962ff;*/
+	/*background-color: #0d47a1;*/
+	background-color: black;
+	position: fixed;
+	top: 15px;
+    bottom: 0px;
+    overflow-y: scroll;
+}
+
+.friends::-webkit-scrollbar {
+	display: none;
+}
+.friends:-moz-scrollbar { /* Mozilla Firefox 4 to 18 */
+   color: #757575;
+   opacity:  1;
+}
+.friends::-moz-scrollbar { /* Mozilla Firefox 19+ */
+   color: #757575;
+   opacity:  1;
+}
+.friends:-ms-scrollbar { /* Internet Explorer 10-11 */
+   color: #757575;
+}
+.friends::-ms-scrollbar { /* Microsoft Edge */
+   color: #757575;
+}
+
+.friends ul{
+	margin-top: 50px;
+}
+
+.friends img{
+	border: 3px solid white;
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	vertical-align: middle;
+	margin-left: 20px;
+}
+
+.friends li{
+	padding-left: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.friends li:hover{
+	background-color: #1976D2;
+	cursor: pointer;
+	margin-right: -20px;
+	margin-left: -5px;
+}
+
+.friends span{
+	color: white;
+	font-size: 20px;
+}
+
+.feed{
+	margin-top: 50px;
+}
+
+.post{
+	background-color: white;
+	height: 200px;
+	/*border: 1px solid black;*/
+	box-shadow: 0px 1px 3px 1px black;
+	margin-bottom: 40px;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #757575;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #757575;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #757575;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #757575;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: #757575;
+}
+
+.container3{
+	width: 95%;
+}
+
+.content .profile{
+	width: 200px;
+	height: 200px;
+	border: 3px solid white;
+}
+
+.changePhoto{
+	color: white;
+	font-weight: bold;
+	font-size: 14px;
+	cursor: pointer;
+	opacity: .5;
+	cursor: pointer;
+}
+
+.changePhoto .profileBtn{
+	float: none;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.changePhoto .profileBtn:hover{
+	cursor: pointer;
+}
+
+#profileForm{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+	top: 120 !important;
+}
+
+.fullName{
+	opacity: 0;
+}
+
+/*.content .profile2{
+	width: 200px;
+	height: 200px;
+	border: 3px solid white;
+	object-fit: cover;
+	top: 0;
+}*/
+
+.fill {
+    width: 200px;
+    height: 200px;
+    border: 4px solid white;
+    outline: 1px solid black;
+	position: relative;
+    overflow: hidden;
+    margin: auto;
+    background-color: white;
+    margin-bottom: 30px;
+    margin-top: 200px;
+}
+
+.fill img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.fill2 {
+    width: 100px;
+    height: 100px;
+    border: 3px solid white;
+	position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.fill2 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.profileSubmit{
+	display: none;
+}
+
+.musicLine{
+	display: none;
+}
+
+#musicForm .btn{
+	margin: auto;
+	float: none;
+}
+
+.cover {
+    width: 100%;
+    height: 300px;
+    border-bottom: 3px solid white;
+    outline: 1px solid black;
+	position: fixed;
+    overflow: hidden;
+   	margin-left: -15px;
+    background-color: white;
+    z-index: -5;
+    box-shadow: 0px 0px 5px 2px black;
+}
+
+.cover img {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    width: 80%;
+}
+
+@media screen and (max-width: 600px){
+	nav .brand-logo{
+		margin-left: 20px;
+	}
+}
