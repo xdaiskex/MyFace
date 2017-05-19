@@ -211,7 +211,7 @@
 			    </div>
 				<div class="col s9 content center">	
 					<div class="cover">
-						<img src="img/haik.jpg" alt="profile" >
+						<img src="img/haik.jpg" alt="profile">
 					</div>
 					<?php 
 						$select = "SELECT picture FROM users WHERE username = '$username'";
@@ -244,7 +244,7 @@
 						</form>
 					</div>
 					<?php 
-						echo "<h3 class=''>".$_SESSION['fullName']."</h3>";
+						/*echo "<h3 class=''>".$_SESSION['fullName']."</h3>";*/
 						$select = "SELECT music FROM users WHERE username = '$username'";
 						$result2 = $mysqli->query($select);
 						$counter = 0;
@@ -270,6 +270,12 @@
 						</div>
 						<input type="submit" name="uploadMusic" value="upload" class="btn btn-large blue profileSubmit">
 					</form>
+					<br>
+					<h1 class="col s12">yo</h1>
+					<h1 class="col s12">yo</h1>
+					<h1 class="col s12">yo</h1>
+					<h1 class="col s12">yo</h1>
+					<h1 class="col s12">yo</h1>
 				</div>
 			</div>
 		</div>

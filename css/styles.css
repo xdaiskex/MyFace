@@ -324,7 +324,7 @@ input:-webkit-autofill {
     margin: auto;
     background-color: white;
     margin-bottom: 30px;
-    margin-top: 200px;
+    margin-top: -100px;
 }
 
 .fill img {
@@ -364,23 +364,33 @@ input:-webkit-autofill {
 }
 
 .cover {
-    width: 100%;
+    width: 110%;
+    margin-left: -5%;
     height: 300px;
     border-bottom: 3px solid white;
     outline: 1px solid black;
-	position: fixed;
+	position: relative;
     overflow: hidden;
-   	margin-left: -15px;
     background-color: white;
     z-index: -5;
     box-shadow: 0px 0px 5px 2px black;
 }
 
+/*.cover .full{
+	position: absolute;
+	bottom: -10px;
+	left: 40px;
+	color: white;
+	-webkit-text-stroke: 2px black;
+	font-weight: bold;
+}*/
+
 .cover img {
     position: absolute;
     top: -50%;
     left: 0;
-    width: 80%;
+    right: 0;
+    width: 100%;
 }
 
 @media screen and (max-width: 600px){
