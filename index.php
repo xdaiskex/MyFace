@@ -166,18 +166,22 @@
 						</form>
 					</div>
 					<div class="col s10 offset-s1 feed center">
-						<div class=post>
-							
-						</div>
-						<div class=post>
-							
-						</div>
-						<div class=post>
-							
-						</div>
-						<div class=post>
-							
-						</div>
+					<?php
+						if(isset($_SESSION['postPic'])){
+							$select = "SELECT * FROM status ORDER BY postDate DESC";
+							$result = $mysqli->query($select);
+
+							while($row = $result->fetch_array(MYSQLI_ASSOC)){
+								echo 
+								"<div class='post'>
+									".$_SESSION['postPic']."
+									<div class='postContent'><p>".$row['content']."</p></div>
+									<div class='date'><b>".DATE_FORMAT(new DateTime($row['postDate']), 'M d \a\t g:ia')."</b></div>
+								</div>";
+
+							}
+						}
+					?>
 					</div>
 				</div>
 			</div>

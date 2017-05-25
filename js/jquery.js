@@ -70,24 +70,30 @@ $(document).ready(function(){
 
 	$(".status").focus(function(){
 		$(".friends").css('filter','brightness(50%)');
+		$(".friends").css('pointer-events','none');
 		$(".friends").css('transition', '1s');
 		$("nav").css('filter','brightness(50%)');
+		$("nav").css('pointer-events','none');
 		$("nav").css('transition', '1s');
 		$("body").css('background-color','black');
 		$("body").css('transition', '1s');
-		$(".content div").not(".statusArea").css('filter','brightness(50%)');
-		$(".content div").not(".statusArea").css('transition', '1s');
+		$(".content .feed").css('filter','brightness(50%)');
+		$(".content .feed").css('pointer-events','none');
+		$(".content .feed").css('transition', '1s');
 	});
 
 	$(".status").blur(function(){
 		$(".friends").css('filter','brightness(100%)');
+		$(".friends").css('pointer-events','auto');
 		$(".friends").css('transition', '1s');
 		$("nav").css('filter','brightness(100%)');
+		$("nav").css('pointer-events','auto');
 		$("nav").css('transition', '1s');
 		$("body").css('background-color','#e0e0e0');
 		$("body").css('transition', '1s');
-		$(".content div").not(".statusArea").css('filter','brightness(100%)');
-		$(".content div").not(".statusArea").css('transition', '1s');
+		$(".content .feed").css('filter','brightness(100%)');
+		$(".content .feed").css('pointer-events','auto');
+		$(".content .feed").css('transition', '1s');
 	});
 
 	$("#profilePicture").change(function(){
@@ -100,5 +106,21 @@ $(document).ready(function(){
 
 	$("#music").change(function(){
 	    $("#musicForm").submit();
+	});
+
+	$("#statusForm").on('submit', function(event){
+		event.preventDefault();
+		var status = $(this).serialize();
+		$.post('status.php', status, function(data){
+			var result = $.trim(data);
+			if(result != "error"){
+				//Materialize.toast('<b>Success</b>', 4000, 'green');
+				$(".feed").prepend(result);
+				$(".status").val("");
+			}
+			else{
+				//Materialize.toast('<b>Failure</b>', 4000, 'red');
+			}
+		});
 	});
 });
