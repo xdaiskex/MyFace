@@ -262,7 +262,7 @@
 							
 							echo "<h3 class='fullName'>".$_SESSION['fullName']."</h3>";
 						?>
-						<form action="" method="post" id="coverForm" enctype="multipart/form-data" class="col s12 l12">
+						<form action="" method="post" id="coverForm" enctype="multipart/form-data" class="col">
 							<div class="file-field input-field changeCover">
 								<div class="btn black profileBtn">
 	        						<span>Change Cover</span>
@@ -289,7 +289,7 @@
 								}					
 							}						
 						?>
-						<form action="" method="post" id="musicForm" enctype="multipart/form-data" class="col s12 l12">
+						<form action="" method="post" id="musicForm" enctype="multipart/form-data" class="col">
 							<div class="file-field input-field">
 								<div class="btn black">
 	        						<span>Change Music</span>
