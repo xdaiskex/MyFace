@@ -144,7 +144,7 @@
 							<a href="index.php">Home</a>
 						</li>
 						<li>
-							<a href="#">Profile</a>
+							<a href="profile.php">Profile</a>
 						</li>
 						<li>
 							<a href="#">Settings</a>
@@ -332,6 +332,8 @@
 							<input type="submit" name="uploadProfile" value="Upload" class="btn btn-large profileSubmit">
 						</form>
 					</div>
+					<?php echo "<h3 class='profileName'>".$_SESSION['fullName']."</h3>"; ?>
+					<p class="bio">"Some inspirational quote"</p>
 				</div>
 			</div>
 		</div>

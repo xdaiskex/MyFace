@@ -12,6 +12,7 @@
 		//$_SESSION['mobilePic'] = "images/".$_SESSION['profile']."";
 		while($row = $result->fetch_array(MYSQLI_ASSOC)){
 			$_SESSION['mobilePic'] = "<div class='fill2'><img src='images/".$row['picture']."' alt='profile' class=' ' onError=\"this.onerror=null;this.src='img/profile.png';\"></div>";
+			$_SESSION['postPic'] = "<div class='postPic'><img src='images/".$row['picture']."' alt='post' onError=\"this.onerror=null;this.src='img/profile.png';\"></div>";
 		}
 		
 	}
@@ -157,12 +158,11 @@
 			      	</ul>
 			    </div>
 				<div class="col s9 content">	
-					<!-- <h3 class="center"><?php echo "Welcome back ".$_SESSION['first'] ?></h3> -->
 					<div class="statusArea">
-						<!-- <img src="img/profile0.png" alt="profile" class="col s2 offset-s1"> -->
-						<form method="post" action="" class="col s10 offset-s1" id="status">
+						<?php echo $_SESSION['postPic'] ?>
+						<form method="post" action="" class="col s10 offset-s1" id="statusForm">
 							<textarea name="status" class="status" placeholder="What do you want to brag to your friends about today?"></textarea>
-							<input type="submit" name="submit" value="Post" class="btn blue col s2 offset-s10">
+							<input type="submit" name="submit" value="Post" class="btn col s2 offset-s10">
 						</form>
 					</div>
 					<div class="col s10 offset-s1 feed center">
