@@ -23,6 +23,26 @@ $(document).ready(function(){
 		$(this).css('transition', '1s');
 	});
 
+	$(".changeCover .profileBtn").hover(function(){
+		$(this).css('cursor', 'pointer');
+		$(this).css('filter','brightness(100%)');
+		$(this).css('transition', '1s');
+	}, function(){
+		$(this).css('cursor', 'pointer');
+		$(this).css('filter','brightness(50%)');
+		$(this).css('transition', '1s');
+	});
+
+	$("#musicForm .btn").hover(function(){
+		$(this).css('cursor', 'pointer');
+		$(this).css('filter','brightness(100%)');
+		$(this).css('transition', '1s');
+	}, function(){
+		$(this).css('cursor', 'pointer');
+		$(this).css('filter','brightness(50%)');
+		$(this).css('transition', '1s');
+	});
+
 	$(".friends li").hover(function(){
 		$(this).css('background-color', '#1976D2');
 		$(this).css('cursor', 'pointer');
@@ -39,6 +59,10 @@ $(document).ready(function(){
 
 	$("#profilePicture").change(function(){
 	    $("#profileForm").submit();
+	});
+
+	$("#coverPicture").change(function(){
+	    $("#coverForm").submit();
 	});
 
 	$("#music").change(function(){

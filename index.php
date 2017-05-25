@@ -71,7 +71,7 @@
 				<li>
 					<div class="userView">
 				      	<div class="background">
-				        	<img src="img/navBackground.jpg">
+				        	<?php echo $_SESSION['coverPic']; ?>
 				      	</div>
 				      	<a href="profile.php"><?php echo $_SESSION['mobilePic']; ?></a>
 				      	<a href="profile.php"><span class="white-text name mobileName"><?php echo $fullname; ?></span></a>

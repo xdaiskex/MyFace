@@ -186,6 +186,7 @@ input:-webkit-autofill {
 	top: 15px;
     bottom: 0px;
     overflow-y: scroll;
+    z-index: 1;
 }
 
 .friends::-webkit-scrollbar {
@@ -223,6 +224,7 @@ input:-webkit-autofill {
 	padding-left: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	transition: 1s;
 }
 
 .friends li:hover{
@@ -354,6 +356,16 @@ input:-webkit-autofill {
 	display: none;
 }
 
+#coverForm .coverBtn{
+	float: right;
+	margin-right: 50px;
+}
+
+.background img{
+	width: 100%;
+	filter: brightness(60%);
+}
+
 .musicLine{
 	display: none;
 }
@@ -372,7 +384,7 @@ input:-webkit-autofill {
 	position: relative;
     overflow: hidden;
     background-color: white;
-    z-index: -5;
+    z-index: 0;
     box-shadow: 0px 0px 5px 2px black;
 }
 
@@ -391,6 +403,29 @@ input:-webkit-autofill {
     left: 0;
     right: 0;
     width: 100%;
+}
+
+.coverForm .btn{
+	margin-top: 100px !important;
+}
+
+.changeCover{
+	color: white;
+	font-weight: bold;
+	font-size: 14px;
+	cursor: pointer;
+	opacity: .5;
+	cursor: pointer;
+}
+
+.changeCover .profileBtn{
+	float: none;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.changeCover .profileBtn:hover{
+	cursor: pointer;
 }
 
 @media screen and (max-width: 600px){

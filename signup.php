@@ -33,16 +33,12 @@
 							username,
 							password,
 							first,
-							last,
-							picture,
-							music)
+							last)
 						VALUES (
 							'".addslashes($username)."',
 							'".addslashes($password)."',
 							'".addslashes($first)."',
-							'".addslashes($last)."',
-							'empty',
-							'empty')";
+							'".addslashes($last)."')";
 					
 					if($mysqli->query($insert) === TRUE){
 						echo "success";
