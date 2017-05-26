@@ -124,4 +124,46 @@ $(document).ready(function(){
 			}
 		});
 	});
+
+	$(".feed").delegate(".comment", "keydown", function(){
+		var comments = document.getElementsByClassName("comment");
+		var numComments = comments.length;
+
+		for (var i = 0; i < numComments; i += 1) {
+		  	comments[i].addEventListener('keydown', autosize);
+		}
+		             
+		function autosize(){
+			var el = this;
+			setTimeout(function(){
+				el.style.cssText = 'height:auto; padding:0';
+				// for box-sizing other than "content-box" use:
+				// el.style.cssText = '-moz-box-sizing:content-box';
+				el.style.cssText = 'height:' + el.scrollHeight + 'px';
+				if(el.value == ''){
+					el.style.cssText = 'height:' + 45 + 'px';
+				}
+			},0);
+		}
+	});
+
+	var comments = document.getElementsByClassName("comment");
+	var numComments = comments.length;
+
+	for (var i = 0; i < numComments; i += 1) {
+	  	comments[i].addEventListener('keydown', autosize);
+	}
+	             
+	function autosize(){
+		var el = this;
+		setTimeout(function(){
+			el.style.cssText = 'height:auto; padding:0';
+			// for box-sizing other than "content-box" use:
+			// el.style.cssText = '-moz-box-sizing:content-box';
+			el.style.cssText = 'height:' + el.scrollHeight + 'px';
+			if(el.value == ''){
+				el.style.cssText = 'height:' + 45 + 'px';
+			}
+		},0);
+	}
 });

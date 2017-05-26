@@ -196,7 +196,7 @@
 									<div class='postContent'><p>".$row['content']."</p></div>
 									<div class='comments'> 
 									</div>
-									<form method='post' action='' id='commentForm'>
+									<form method='post' action='' class='commentForm'>
 										<textarea name='comment' class='comment' placeholder='Write a comment...'></textarea>
 										<input type='submit' name='submitComment' value='Post' class='btn col black s2 offset-s10'>
 									</form>

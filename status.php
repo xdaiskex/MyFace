@@ -32,6 +32,12 @@
 					<div class='postPic'><img src='images/".$row['image']."' alt='post' onError=\"this.onerror=null;this.src='img/profile.png';\">
 					</div>
 					<div class='postContent'><p>".$row['content']."</p></div>
+					<div class='comments'> 
+					</div>
+					<form method='post' action='' class='commentForm'>
+						<textarea name='comment' class='comment' placeholder='Write a comment...'></textarea>
+						<input type='submit' name='submitComment' value='Post' class='btn col black s2 offset-s10'>
+					</form>
 				</div>";
 			}
 		}
