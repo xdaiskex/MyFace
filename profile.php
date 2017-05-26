@@ -28,6 +28,7 @@
 			$result = $mysqli->query($select);
 
 			while($row = $result->fetch_array(MYSQLI_ASSOC)){
+				$_SESSION['pic'] = $row['picture'];
 				$_SESSION['picture'] = "<img src='images/".$row['picture']."' alt='profile' class='profilePic' onError=\"this.onerror=null;this.src='img/profile.png';\">";
 				$_SESSION['mobilePic'] = "<img src='images/".$row['picture']."' alt='profile' class='circle mobilePic' onError=\"this.onerror=null;this.src='img/profile.png';\">";
 			}

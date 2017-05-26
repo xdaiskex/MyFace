@@ -91,7 +91,22 @@
 			<div class="row">
 				<div class="friends col s3">
 			      	<ul class="friendsList">
-			      		<li>
+				      	<?php
+				      		$username = $_SESSION['username'];
+				      		$select = "SELECT * FROM users WHERE NOT username = '$username'";
+							$result = $mysqli->query($select);
+
+							while($row = $result->fetch_array(MYSQLI_ASSOC)){
+								echo 
+								"<li>
+									<div>
+				      					<img src='images/".$row['picture']."' alt='".$row['username']."' onError=\"this.onerror=null;this.src='img/profile.png';\">
+				      				</div>
+				      				<span class='friendsName'>".$row['first']." ".$row['last']."</span>
+				      			</li>";
+							}
+				      	?>
+			      		<!-- <li>
 			      			<img src="img/profile0.png" alt="friends">
 			      			<span class="friendsName">Anthony Nguyen</span>
 			      		</li>
@@ -154,7 +169,7 @@
 			      		<li>
 			      			<img src="img/profile0.png" alt="friends">
 			      			<span class="friendsName">Anthony What</span>
-			      		</li>
+			      		</li> -->
 			      	</ul>
 			    </div>
 				<div class="col s9 content">	
@@ -168,17 +183,24 @@
 					<div class="col s10 offset-s1 feed center">
 					<?php
 						if(isset($_SESSION['postPic'])){
-							$select = "SELECT * FROM status ORDER BY postDate DESC";
+							$select = "SELECT * FROM posts ORDER BY postDate DESC";
 							$result = $mysqli->query($select);
 
 							while($row = $result->fetch_array(MYSQLI_ASSOC)){
 								echo 
 								"<div class='post'>
-									".$_SESSION['postPic']."
+									<div class='date col l12'><a href='#'>".$row['fullName']."</a> posted on <b>".DATE_FORMAT(new DateTime($row['postDate']), 'M d \a\t g:ia')."</b>
+									</div>
+									<div class='postPic'><img src='images/".$row['image']."' alt='post' onError=\"this.onerror=null;this.src='img/profile.png';\">
+									</div>
 									<div class='postContent'><p>".$row['content']."</p></div>
-									<div class='date'><b>".DATE_FORMAT(new DateTime($row['postDate']), 'M d \a\t g:ia')."</b></div>
+									<div class='comments'> 
+									</div>
+									<form method='post' action='' id='commentForm'>
+										<textarea name='comment' class='comment' placeholder='Write a comment...'></textarea>
+										<input type='submit' name='submitComment' value='Post' class='btn col black s2 offset-s10'>
+									</form>
 								</div>";
-
 							}
 						}
 					?>

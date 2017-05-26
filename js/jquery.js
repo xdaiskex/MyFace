@@ -58,7 +58,7 @@ $(document).ready(function(){
 		$(this).css('background-color', '#1976D2');
 		$(this).css('cursor', 'pointer');
 		$(this).css('margin-right','-20px');
-		$(this).css('margin-left','-5px');
+		$(this).css('margin-left','-10px');
 		$(this).css('transition', '1s');
 	}, function(){
 		$(this).css('background-color', 'black');
@@ -115,6 +115,7 @@ $(document).ready(function(){
 			var result = $.trim(data);
 			if(result != "error"){
 				//Materialize.toast('<b>Success</b>', 4000, 'green');
+				$(".feed").empty();
 				$(".feed").prepend(result);
 				$(".status").val("");
 			}
